@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verdade ou Riso: Versão Atrevidinha</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(135deg, #ffe2e2, #e0c3fc);
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    #card {
+      margin: 40px auto;
+      padding: 30px;
+      width: 80%;
+      max-width: 500px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+  <h1>Verdade ou Riso: Versão Atrevidinha</h1>
+  <p>Clique no botão para sortear uma carta!</p>
+  <div id="card">Pronto para começar?</div>
+  <button onclick="sortearCarta()">Sortear Carta</button>
+
+  <script>
+    const cartas = [
+      "Qual foi o maior mico que você já pagou?",
+      "Se tivesse que dar um selinho em alguém aqui, em quem seria?",
+      "Sophia, se Laine e Ethan estivessem disputando sua atenção, quem ganhava?",
+      "Laine: o que mais te faz rir no Ethan?",
+      "Ethan: imite Laine recebendo um elogio inesperado.",
+      "Se tivesse que dormir em uma cabana com um do grupo, quem você escolheria?",
+      "Qual de vocês parece esconder um crush secreto?",
+      "Sophia, conte algo embaraçoso de um dos dois!",
+      "Você acha que Laine e Ethan formariam um bom casal de reality show?",
+      "Quem aqui você acha que daria o melhor beijo de novela?",
+      "Dance como se estivesse num videoclipe (1 minuto).",
+      "Envie uma mensagem aleatória pro último contato no WhatsApp e leia a resposta.",
+      "Imite um famoso por 15 segundos. Quem você escolhe?",
+      "Escolha alguém para fazer um elogio de novela.",
+      "Finja estar apaixonado por um de vocês por 1 minuto.",
+      "Ethan, faça uma cantada cafona para Laine!",
+      "Laine, desafie Sophia para um duelo de olhares!",
+      "Sophia, escolha quem aqui parece esconder mais segredos (e diga por quê).",
+      "Todo mundo tem que inventar um apelido engraçado para o jogador da esquerda.",
+      "Declare amor eterno em estilo dramático para quem você quiser!"
+    ];
+
+    function sortearCarta() {
+      const sorteio = cartas[Math.floor(Math.random() * cartas.length)];
+      document.getElementById("card").textContent = sorteio;
+    }
+  </script>
+</body>
+</html>
